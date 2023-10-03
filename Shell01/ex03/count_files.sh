@@ -1,2 +1,2 @@
 #!/bin/bash
-find . | grep -c " "
+find . "*" | wc -l | tr -d ' '
