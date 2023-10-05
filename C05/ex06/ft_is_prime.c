@@ -6,23 +6,29 @@
 /*   By: yrhazil <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 16:11:04 by yrhazil           #+#    #+#             */
-/*   Updated: 2023/10/04 23:09:22 by yrhazil          ###   ########.fr       */
+/*   Updated: 2023/10/05 14:08:46 by yrhazil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_prime(int nb)
+int	ft_sqrt(int nb)
 {
-	int	i;
+	long	i;
+	long	nbr;
 
+	nbr = nb;
 	i = 2;
-	while (i < (nb / i))
+	if (nbr <= 0)
+		return (0);
+	else if (nbr == 1)
+		return (1);
+	else
 	{
-		if (nb % i == 0)
+		while (i * i <= nbr)
 		{
-			return (0);
-		}
-		else
+			if (i * i == nbr)
+				return (i);
 			i++;
+		}
 	}
-	return (1);
+	return (0);
 }
